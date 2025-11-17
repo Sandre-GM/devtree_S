@@ -1,0 +1,31 @@
+{
+  "name": "devtree",
+  "version": "1.0.0",
+  "description": "Primer proyecto FullStack",
+  "homepage": "https://github.com/Sandre-GM/Fullstack---Tree#readme",
+  "bugs": {
+    "url": "https://github.com/Sandre-GM/Fullstack---Tree/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sandre-GM/Fullstack---Tree.git"
+  },
+  "license": "ISC",
+  "author": "Sandre Mauricio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.5",
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}
