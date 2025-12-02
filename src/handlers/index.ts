@@ -3,6 +3,7 @@ import { validationResult } from "express-validator";
 import slug from "slug";
 import User from "../models/User";
 import { comparePassword, hashPassword } from "../utils/auth";
+import { generateJWT } from "../utils/jwt";
 
 export const createAccount = async (req: Request, res: Response) => {
   const { email, password } = req.body;
@@ -42,5 +43,7 @@ export const login = async (req: Request, res: Response) => {
     return res.status(401).json({ error: error.message });
   }
 
-  res.status(200).json({ message: "Inicio de sesión exitoso" });
+  const token = generateJWT({ id: user._id });
+
+  res.send(token);
 };
